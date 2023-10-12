@@ -3,7 +3,8 @@
 # .\venv\bin\pip install pyside6
 # Freeze les dépendences
 # .\venv\bin\pip freeze > requirement.txt
-
+import random
+import string
 import sys
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
@@ -60,13 +61,50 @@ class MainWindow(QMainWindow):
         self.option_special = QCheckBox("Symboles")
         option_layout.addWidget(self.option_special, 1, 2)
 
-        # Connecter le signal valueChanged du QSlider à une méthode
-        self.option_size.valueChanged.connect(self.update_label)
+        self.option_lowercase.setChecked(True)
+        self.option_number.setChecked(True)
 
-    def update_label(self):
+        btn_quit.clicked.connect(self.quit)
+        btn_copy.clicked.connect(self.copy)
+        btn_generate.clicked.connect(self.generate)
+
+
+        # Générer un mdp au lancement
+        self.generate()
+
+        # Connecter le signal valueChanged du QSlider à une méthode
+        self.option_size.valueChanged.connect(self.change_size)
+    def quit(self):
+        QApplication.quit()
+    def copy(self):
+        clipboard = QApplication.clipboard()
+        clipboard.setText(self.password_generated.text())
+    def change_size(self):
         # Mettre à jour le texte du QLabel avec la valeur du QSlider
         self.txt_size.setText(f"Taille : {self.option_size.value()}")
+    def generate(self):
+        size = self.option_size.value()
+        has_lower = self.option_lowercase.isChecked()
+        has_upper = self.option_uppercase.isChecked()
+        has_number = self.option_number.isChecked()
+        has_special = self.option_special.isChecked()
 
+        all_chars = ''
+        if has_lower:
+            all_chars += string.ascii_lowercase
+        if has_upper:
+            all_chars += string.ascii_uppercase
+        if has_number:
+            all_chars += string.digits
+        if has_special:
+            all_chars += string.punctuation
+
+        if len(all_chars) == 0:
+            self.password_generated.setText("Veuillez sélectionner au moins une option.")
+            return
+
+        password = ''.join(random.choice(all_chars) for _ in range(size))
+        self.password_generated.setText(f"{password}")
 
 app = QApplication(sys.argv)
 window = MainWindow()
