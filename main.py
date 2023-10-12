@@ -74,11 +74,17 @@ class MainWindow(QMainWindow):
 
         # Connecter le signal valueChanged du QSlider à une méthode
         self.option_size.valueChanged.connect(self.change_size)
+
+        # Statut bar lors de la copie du mot de passe
+        self.status_bar = self.statusBar()
+
+
     def quit(self):
         QApplication.quit()
     def copy(self):
         clipboard = QApplication.clipboard()
         clipboard.setText(self.password_generated.text())
+        self.status_bar.showMessage("Le mot de passe a été copié.", 1000)
     def change_size(self):
         # Mettre à jour le texte du QLabel avec la valeur du QSlider
         self.txt_size.setText(f"Taille : {self.option_size.value()}")
