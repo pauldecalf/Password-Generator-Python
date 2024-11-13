@@ -22,8 +22,8 @@ Ce projet est une application graphique développée en Python avec `PySide6` po
 
 1. **Cloner le dépôt** :
    ```bash
-   git clone https://github.com/pauldecalf/Password-Generator-Python-PySide6-
-   cd Password-Generator-Python-PySide6-
+   git clone https://github.com/pauldecalf/Password-Generator-Python.git
+   cd Password-Generator-Python
    ```
 
 2. **Créer un environnement virtuel** :

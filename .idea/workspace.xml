@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="584af37d-cff4-4349-b116-dbc52f03166e" name="Changes" comment="V1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="584af37d-cff4-4349-b116-dbc52f03166e" name="Changes" comment="Modification du README">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +16,12 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -84,7 +89,7 @@
       <updated>1697097763040</updated>
       <workItem from="1697097764128" duration="612000" />
       <workItem from="1697098392434" duration="6427000" />
-      <workItem from="1731524320569" duration="155000" />
+      <workItem from="1731524320569" duration="265000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -126,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697104999761</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modification du README">
+      <option name="closed" value="true" />
+      <created>1731524517250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731524517250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +174,8 @@
     <MESSAGE value="Update :&#10;&#10;- README" />
     <MESSAGE value="Update :&#10;&#10;- PasswordGenerator update" />
     <MESSAGE value="V1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.0" />
+    <MESSAGE value="Modification du README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification du README" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python_PasswordGenerator$main.coverage" NAME="main Coverage Results" MODIFIED="1697105126547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
